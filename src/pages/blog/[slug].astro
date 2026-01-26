@@ -1,4 +1,6 @@
 ---
+import "../../styles/globals.css";
+import "../../styles/blog-post.css";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
@@ -15,7 +17,7 @@ const { Content } = await post.render();
 ---
 
 <h1>{post.data.title}</h1>
-<p>{post.data.description}</p>
+<h4>{post.data.description}</h4>
 
 <Content />
 
