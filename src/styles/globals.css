@@ -12,6 +12,7 @@ body {
   background: var(--base);
   color: var(--text);
   font-family: "Atkinson Hyperlegible", sans-serif;
+  margin-left: 2rem;
 }
 
 a {
