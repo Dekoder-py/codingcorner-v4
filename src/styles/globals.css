@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
   --base: #1e1e2e;
+  --surf-0: #313244;
   --text: #cdd6f4;
   --accent: #cba6f7;
   --blue: #89b4fa;
   --lavender: #b4befe;
+}
+
+html,
+body {
+  width: 100%;
 }
 
 body {
@@ -13,6 +19,9 @@ body {
   color: var(--text);
   font-family: "Atkinson Hyperlegible", sans-serif;
   margin-left: 2rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {

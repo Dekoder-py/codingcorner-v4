@@ -1,15 +1,18 @@
 #navigation {
+  background: var(--surf-0);
   padding-top: 60px;
   padding-bottom: 60px;
-  border: 2px solid var(--accent);
-  font-family: monospace;
+  border: 2px solid var(--blue);
   width: 200px;
   max-width: 200px;
 }
 
-#navigation a {
+#navigation a,
+#navigation a:visited {
+  color: var(--lavender);
   display: block;
   text-align: center;
   text-decoration: none;
   line-height: 2;
+  font-size: 1.15rem;
 }
