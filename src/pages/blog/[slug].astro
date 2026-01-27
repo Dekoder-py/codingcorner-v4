@@ -1,23 +1,31 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
 import "../../styles/globals.css";
 import "../../styles/blog-post.css";
 import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
 
-  return posts.map((post) => ({
+  return posts.map((post: CollectionEntry<"blog">) => ({
     params: { slug: post.slug },
     props: { post },
   }));
 }
 
-const { post } = Astro.props;
+const { post }: { post: CollectionEntry<"blog"> } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<h1>{post.data.title}</h1>
-<h4>{post.data.description}</h4>
+<BaseLayout title={post.data.title}>
+  <!-- show hero image if it is set -->
+  {post.data.heroImage && <img src={post.data.heroImage} width={1000} alt="" />}
 
-<Content />
+  <h1>{post.data.title}</h1>
+  <h4>{post.data.description}</h4>
+  <h5>{post.data.pubDate}</h5>
+  {post.data.updatedDate && <h6>{post.data.updatedDate}</h6>}
 
+  <Content />
+</BaseLayout>
