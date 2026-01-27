@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
   --base: #1e1e2e;
   --text: #cdd6f4;
@@ -7,6 +9,7 @@
 body {
   background: var(--base);
   color: var(--text);
+  /* font-family: "Atkinson Hyperlegible", sans-serif; */
 }
 
 a {
