@@ -1,8 +1,14 @@
+body {
+  margin-left: 2rem;
+}
+
 #navigation {
+  padding-top: 60px;
+  padding-bottom: 60px;
   border: 2px solid var(--accent);
   font-family: monospace;
   width: 200px;
-  height: 400px;
+  max-width: 200px;
 }
 
 #navigation a {
