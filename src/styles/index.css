@@ -1,0 +1,13 @@
+#navigation {
+  border: 2px solid var(--accent);
+  font-family: monospace;
+  width: 200px;
+  height: 400px;
+}
+
+#navigation a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2;
+}
