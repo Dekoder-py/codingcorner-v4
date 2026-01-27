@@ -24,8 +24,27 @@ const { Content } = await post.render();
 
   <h1>{post.data.title}</h1>
   <h4>{post.data.description}</h4>
-  <h5>{post.data.pubDate}</h5>
-  {post.data.updatedDate && <h6>{post.data.updatedDate}</h6>}
+  <h5>
+    {
+      post.data.pubDate.toLocaleDateString("en-nz", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    }
+  </h5>
+  {
+    post.data.updatedDate && (
+      <h6>
+        Last updated on{" "}
+        {post.data.updatedDate.toLocaleDateString("en-nz", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })}
+      </h6>
+    )
+  }
 
   <Content />
 </BaseLayout>
