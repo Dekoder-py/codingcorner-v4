@@ -1,9 +1,11 @@
 ---
-import "../../styles/globals.css";
+import MainLayout from "../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 
 const posts = await getCollection("blog");
 ---
+
+<MainLayout>
 <a href="/">Home</a>
 <h1>Blog</h1>
 
@@ -16,4 +18,4 @@ const posts = await getCollection("blog");
     </li>
   ))}
 </ul>
-
+</MainLayout>
