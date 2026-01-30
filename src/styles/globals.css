@@ -18,6 +18,9 @@ body {
   background: var(--base);
   color: var(--text);
   font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+main {
   margin-left: 2rem;
   max-width: 72rem;
   margin-left: auto;
